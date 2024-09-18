@@ -1,0 +1,302 @@
+/* Camilo Parra cambio de variables */
+:root{
+    /* Colores primarios */
+    --primary-100:#39a900;
+    --primary-80:#61ca33;
+    --primary-60:#88cc66;
+    --primary-20:#b0dd99;
+    --primary-10:#d7eedd;
+
+    /* colores secundarios */
+    --secundary-1-100:#fdc300;
+    --secundary-2-100:#50e5f9;
+
+    /* colores basicos */
+    --white:#ffffff;
+    --black:#000000;
+    --gray-100:#313131;
+    --gray-80:#494949;
+    --gray-60:#c5c5c5;
+    --gray-20:#f6f6f6;
+
+    --fuente-pricipal: 3.2rem;
+    --fuente-secundaria: 2.2rem;
+}
+html{
+    font-size: 62.5%;
+    box-sizing: border-box;
+}
+
+*,*::before, *::after{
+    box-sizing: inherit;
+}
+body{
+    margin: 0 auto;
+    font-size: 1.6rem;
+    font-family: "Krub", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    background-image: linear-gradient(to bottom, var(--gray-80) 0%, var(--white));
+}
+
+/* headings */
+h1{
+    font-size: 3.2rem;
+}
+
+h2{
+    font-size: 2.4rem;
+}
+
+h3{
+    font-size: 2.0rem;
+}
+
+h4{
+    font-size: 1.6rem;
+}
+
+h1, h2, h3{
+    text-align: center;
+}
+
+.titulo{
+    font-size: 3.2rem;
+    color:var(--black);
+    font-family: "Krub", sans-serif;
+    font-weight: 700;
+    font-style: normal;
+    text-align: center;
+
+}
+
+.titulo span{
+    font-size: 2.0rem;
+    color: var(--black);
+}
+/* Camilo Parra MQ */
+.main-nav{
+    padding: 1.2rem;
+    display: flex;
+    justify-content: space-around;
+    flex-direction: column;
+}
+@media (min-width: 768px) {
+    .main-nav{
+        flex-direction: row;
+    }
+
+    }
+
+    /* nav */
+.container{
+    margin: 0rem auto;
+    width: 120rem;
+    max-width: 120rem;
+}
+.nav-bg{
+    background-color: var(--primary-100);
+}
+
+.main-nav a{
+    color: var(--white);
+    text-decoration: none;
+    padding: 1.2rem;
+    font-weight: 700;
+}
+/* Camilo Parra pseudo hover  */
+.main-nav a:hover{
+    background-color: var(--secundary-1-100);
+    color: var(--black);
+}
+
+/* hero-content */
+.hero{
+    background-image: url('/img/hero.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    height: 45rem;
+    padding: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    margin-bottom: 3rem;
+}
+
+.hero-content{
+    position: absolute;
+    color: var(--white);
+    inset: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.button{
+    background-color: var(--primary-100);
+    color: var(--white);
+    border: none;
+    padding: 10px;
+    border-radius: 1rem;
+    margin-top: 5rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    width: 90%;
+}
+
+.button:hover{
+    background-color: var(--secundary-1-100);
+    color: var(--black);
+    transition-duration: 1.2s;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+@media (min-width: 768px){
+    .button{
+        width: auto;
+    }
+}
+/* shadow */
+.shadow{
+box-shadow: 0px 0px 30px 0px rgba(0,0,0,0.75);
+background-color: var(--white);
+padding: 3rem;
+border-radius: 10px;
+}
+
+/* services */
+.services{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+}
+
+@media (min-width: 768px){
+    .services{
+        display: grid;
+        grid-template-columns: repeat(3,1fr);
+    }
+
+}
+
+.service{
+    display: flex;
+    flex-direction: column;
+    align-items: center;    
+    text-align: center;
+    padding: 2rem;
+    border: solid 3px var(--secundary-2-100);
+    margin: 12px;
+    border-radius: 6px;
+    }
+
+
+.service h3{
+    font-weight: bold;
+}
+
+.service .icons{
+    height: 15rem;
+    width: 15rem;
+    background-color: var(--secundary-1-100);
+    border-radius: 50%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.service p{
+    line-height: 2;
+}
+
+/* contact */
+.form{
+    background-color: var(--gray-80);
+    width: min(60rem, 100%);
+    margin: 0 auto;
+    padding: 2rem;
+    border-radius: 0.6rem;
+
+}
+
+.form fieldset{
+    border: none;
+}
+
+.form legend{
+    text-align: center;
+    margin-bottom: 2rem;
+    font-weight: 700;
+    color: var(--secundary-2-100);
+    font-size: 2rem;
+}
+
+.field{
+    margin: 1rem;
+}
+
+.field label{
+    color: var(--white);
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+    display: block;
+}
+
+.field .input[type="text"]
+.field .input[type="tel"]
+.field .input[type="email"]{
+    background-color: var(--secundary-1-100);
+} 
+
+
+
+.field-container{
+    display: grid;
+    grid-template-columns: 50% 50%;
+    grid-template-rows: auto auto 20rem;
+    column-gap: 1rem;
+}
+
+.field:nth-child(3),
+.field:nth-child(4){
+    grid-column: 1 / 3;
+}
+
+.input-text{
+    width: 100%;
+    padding: 1.5rem;
+    border: none;
+    border-radius: 0.6rem;
+}
+
+.button-container{
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    margin-top: 1px;
+    margin-bottom: 1rem;
+}
+
+@media (min-width: 768px){
+    .send .button{
+        width: 30%;
+    }
+}
+
+textarea{
+    width: 100%;
+    padding: 1.5rem;
+    border: none;
+    border-radius: 0.6rem;
+}
+
+.field textarea{
+    height: 20rem;
+}
+
+.derechos{
+    text-align: center;
+}
